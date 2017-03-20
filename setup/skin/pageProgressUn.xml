@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Windows>
+  <VerticalLayout >
+  
+    <VerticalLayout name="bannerProgressUn" width="480" height="250" roundcorner="5,5">
+	
+	</VerticalLayout>
+	<VerticalLayout bkcolor="#FFFFFFFF" >   
+	
+	<Control height="60" />
+	<Slider name="slrUnInstProgress" padding="30,0,30,0" height="3" mouse="false" foreimage="progress_fg.png" bkimage="progress_bg.png" thumbsize="0,0" bkcolor="#FFD8D8D8"  />
+	<HorizontalLayout height="20" padding="30,5,0,0">
+	<Label font="0" name="lblUnProgressTip" width="100" textcolor="#ff555555" text="Uninstalling" />
+	<Control />
+	<Label font="0" name="lblUnProgressPos" width="60" textalign="right" textcolor="#ff555555" />
+	</HorizontalLayout>
+	<Control />
+	
+	</VerticalLayout>
+	</VerticalLayout>	
+</Windows>

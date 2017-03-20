@@ -1,0 +1,196 @@
+{
+    "displayConfig": {
+        "bright": 16,
+        "closeScreenTime": {
+            "cmpDay": false,
+            "cmpFRI": true,
+            "cmpHour": true,
+            "cmpMON": true,
+            "cmpMin": true,
+            "cmpMonth": false,
+            "cmpSAT": true,
+            "cmpSUN": true,
+            "cmpSec": true,
+            "cmpTHU": true,
+            "cmpTUE": true,
+            "cmpWED": true,
+            "cmpYear": false,
+            "time": {
+                "date": "0-0-0",
+                "time": "23:0:0",
+                "week": 0
+            }
+        },
+        "currentTime": {
+            "date": "2017-3-13",
+            "time": "13:52:22",
+            "week": 1
+        },
+        "enAutoBright": false,
+        "enAutoCloseScreen": false,
+        "enAutoOpenScreen": false,
+        "enRelativeTime": false,
+        "openScreenTime": {
+            "cmpDay": false,
+            "cmpFRI": true,
+            "cmpHour": true,
+            "cmpMON": true,
+            "cmpMin": true,
+            "cmpMonth": false,
+            "cmpSAT": true,
+            "cmpSUN": true,
+            "cmpSec": true,
+            "cmpTHU": true,
+            "cmpTUE": true,
+            "cmpWED": true,
+            "cmpYear": false,
+            "time": {
+                "date": "0-0-0",
+                "time": "8:0:0",
+                "week": 0
+            }
+        },
+        "updateBright": true,
+        "updateTime": true,
+        "updateTimingBright": true
+    },
+    "ledScreenConfig": {
+        "abcdeMode": "high138",
+        "baseColor": 1,
+        "configIndex": 0,
+        "dataPolar": true,
+        "extendInfo": false,
+        "frequency": 2,
+        "gama": 2,
+        "grayLevel": 0,
+        "height": 256,
+        "lineBlank": 20,
+        "lineVerify": 0,
+        "model": "",
+        "oePolar": true,
+        "scanLine": 16,
+        "scanMode": 4,
+        "screenMirror": false,
+        "screenSplit": false,
+        "strPolar": false,
+        "warpBit": 8,
+        "warpMode": "downWarp",
+        "width": 512
+    },
+    "programDescribe": [
+        {
+            "areaArray": [
+                {
+                    "areaDescribe": {
+                        "pictureFuseArray": [
+                            {
+                                "content": "C:/Users/baojian/AppData/Local/Temp/Kaler/WonderShow/{3ea64d5b-f106-4640-9dad-d12645722542}.bmp",
+                                "delay": 0,
+                                "enterMode": 3,
+                                "height": 256,
+                                "jumpGrid": 0,
+                                "speed": 5,
+                                "width": 133
+                            },
+                            {
+                                "content": "C:/Users/baojian/AppData/Local/Temp/Kaler/WonderShow/{6b699026-fad3-4044-9f29-ce4c2486dcdb}.bmp",
+                                "delay": 0,
+                                "enterMode": 3,
+                                "height": 256,
+                                "jumpGrid": 0,
+                                "speed": 5,
+                                "width": 133
+                            },
+                            {
+                                "content": "C:/Users/baojian/AppData/Local/Temp/Kaler/WonderShow/{7464ef75-8315-41cd-89ce-6961f2c637c9}.bmp",
+                                "delay": 0,
+                                "enterMode": 3,
+                                "height": 256,
+                                "jumpGrid": 0,
+                                "speed": 5,
+                                "width": 133
+                            }
+                        ]
+                    },
+                    "coordHeight": 256,
+                    "coordWidth": 133,
+                    "coordX": 0,
+                    "coordY": 0,
+                    "name": "none",
+                    "type": "word"
+                },
+                {
+                    "areaDescribe": {
+                        "pictureFuseArray": [
+                            {
+                                "content": "C:/Users/baojian/AppData/Local/Temp/Kaler/WonderShow/{089e72c6-ca06-4241-beab-e88d03b7432a}.bmp",
+                                "delay": 0,
+                                "enterMode": 3,
+                                "height": 128,
+                                "jumpGrid": 0,
+                                "speed": 5,
+                                "width": 256
+                            }
+                        ]
+                    },
+                    "coordHeight": 128,
+                    "coordWidth": 256,
+                    "coordX": 168,
+                    "coordY": 68,
+                    "name": "none",
+                    "type": "word"
+                }
+            ],
+            "name": "none",
+            "playControl": {
+                "timeLong": 0,
+                "timeMode": "sequence"
+            }
+        },
+        {
+            "areaArray": [
+                {
+                    "areaDescribe": {
+                        "pictureFuseArray": [
+                            {
+                                "content": "C:/Users/baojian/AppData/Local/Temp/Kaler/WonderShow/{043ff5fc-cab8-47ea-b159-8d6a12f024e7}.bmp",
+                                "delay": 0,
+                                "enterMode": 3,
+                                "height": 128,
+                                "jumpGrid": 0,
+                                "speed": 5,
+                                "width": 256
+                            },
+                            {
+                                "content": "C:/Users/baojian/AppData/Local/Temp/Kaler/WonderShow/{19cdabce-7ac6-4cca-b790-179fc07922e1}.bmp",
+                                "delay": 0,
+                                "enterMode": 3,
+                                "height": 128,
+                                "jumpGrid": 0,
+                                "speed": 5,
+                                "width": 256
+                            }
+                        ]
+                    },
+                    "coordHeight": 128,
+                    "coordWidth": 256,
+                    "coordX": 118,
+                    "coordY": 71,
+                    "name": "none",
+                    "type": "word"
+                }
+            ],
+            "name": "none",
+            "playControl": {
+                "timeLong": 600,
+                "timeMode": "fixLength"
+            }
+        }
+    ],
+    "topLevelConfig": {
+        "colorThreshold": 128,
+        "dataEndian": "all",
+        "outFilePath": "C:/Users/baojian/Desktop/111",
+        "privateModel": "X4S"
+    }
+}

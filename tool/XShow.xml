@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>XShow编辑器</title>
+        <description>XShow编辑器最新版本</description>
+        <language>cn</language>
+        <item>
+            <title>版本号 6.0.0.1</title>
+            <sparkle:releaseNotesLink>http://www.kalerka.com/</sparkle:releaseNotesLink>
+            <pubDate>Fri, 06 Dec 2016 22:49:00 +0100</pubDate>
+            <enclosure url="http://127.0.0.1/XShow_6.0.0.0_setup.exe"
+                       sparkle:version="6.0.0.1"
+                       length="37834732"
+                       type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>

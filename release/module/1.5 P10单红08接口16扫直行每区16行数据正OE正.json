@@ -1,0 +1,243 @@
+{
+    "ledModule": {
+        "baseColor": "one",
+        "change": false,
+        "color1": 0,
+        "color2": 1,
+        "color3": 2,
+        "color4": 3,
+        "complete": true,
+        "dataPolarity": true,
+        "decodeMode": "high138",
+        "dotIndex": 512,
+        "dotMap": [
+            {
+                "empty": false,
+                "index": 0,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 1,
+                "x": 1,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 2,
+                "x": 2,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 3,
+                "x": 3,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 4,
+                "x": 4,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 5,
+                "x": 5,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 6,
+                "x": 6,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 7,
+                "x": 7,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 8,
+                "x": 8,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 9,
+                "x": 9,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 10,
+                "x": 10,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 11,
+                "x": 11,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 12,
+                "x": 12,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 13,
+                "x": 13,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 14,
+                "x": 14,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 15,
+                "x": 15,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 16,
+                "x": 16,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 17,
+                "x": 17,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 18,
+                "x": 18,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 19,
+                "x": 19,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 20,
+                "x": 20,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 21,
+                "x": 21,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 22,
+                "x": 22,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 23,
+                "x": 23,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 24,
+                "x": 24,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 25,
+                "x": 25,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 26,
+                "x": 26,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 27,
+                "x": 27,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 28,
+                "x": 28,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 29,
+                "x": 29,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 30,
+                "x": 30,
+                "y": 0
+            },
+            {
+                "empty": false,
+                "index": 31,
+                "x": 31,
+                "y": 0
+            }
+        ],
+        "emptyDot": 0,
+        "emptyDotIndex": 0,
+        "expandRGB": false,
+        "lineMap": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+        ],
+        "mirror": false,
+        "model": "1.5 P10单红08接口16扫直行每区16行数据正OE正",
+        "moduleHeight": 16,
+        "moduleLines": 16,
+        "moduleWidth": 32,
+        "oePolarity": true,
+        "scanDot": true,
+        "scanLines": 16,
+        "split": false,
+        "strPolarity": false,
+        "warpBits": 4,
+        "warpMode": "up",
+        "warpTimes": 1,
+        "warpTurn": false
+    }
+}

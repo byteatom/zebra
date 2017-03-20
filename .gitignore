@@ -1,0 +1,15 @@
+/tmp/
+/debug/
+/ksdk/
+/pdb/
+/release/data/
+/release/log/
+/src/lib/boost/*
+!/src/lib/boost/build.bat
+
+*.pdb
+*.exp
+*.ilk
+*.user*
+~$*
+*.autosave

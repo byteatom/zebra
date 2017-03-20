@@ -1,0 +1,47 @@
+{    
+    "~screens": [
+        {            
+            "name": "屏幕 1",      
+            "model": "Zebra",
+			"id":"123-234-4344",
+			"orientation":"landscape",  /*landscape, portrait*/
+            "~programs": [
+                {                
+					"name": "节目 1",           
+                    "mode": "fixedLenth", 	/*fixedLenth, sequence*/
+                    "~regions": [
+                        {
+							"name": "特效区域",
+                            "type": "animation",
+							"x": 0,
+                            "y": 0,		
+							"width": 64,
+                            "height": 32,
+							"~items": [
+                                {                                    
+                                    "path": "/p0/r0",
+                                    "duration": "100000" /*毫秒*/
+                                }
+                            ]
+                        },
+                        {
+							"name": "视频区域 1",
+                            "type": "video",
+							"x": 0,
+                            "y": 0,
+							"width": 64,                            					
+                            "height": 32,
+							"~items": [
+                                {                                    
+                                    "path": "/p0/r1/a.mp4",
+                                    "duration": "100000", /*毫秒*/
+                                    "alpha": 0.7
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

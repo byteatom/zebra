@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Windows>
+  <VerticalLayout >
+     <VerticalLayout name="bannerEndUn" width="480" height="250" roundcorner="5,5">
+	
+	</VerticalLayout>
+	<VerticalLayout bkcolor="#FFFFFFFF" >   
+	<Label name="lblUnEnd" padding="30,30,0,0" font="8" width="400" normaltextcolor="#ff666666" text="Uninstall finished." />
+	<Button name="btnUnEnd" font="6" padding="380,40,0,0" text="Finishe"  textcolor="#FFFFFFFF" normalimage="file='button/btn_global_green_80x30_normal.png' " hotimage="file='button/btn_global_green_80x30_hovered.png'" pushedimage="file='button/btn_global_green_80x30_pushed.png'" width="80" height="30"/>
+	</VerticalLayout>
+ </VerticalLayout>
+</Windows>

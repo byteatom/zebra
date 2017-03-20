@@ -1,0 +1,31 @@
+{
+    "ledModule": {
+        "baseColor": "one",
+        "change": false,
+        "color1": 0,
+        "color2": 1,
+        "color3": 2,
+        "color4": 3,
+        "complete": true,
+        "dataPolarity": true,
+        "decodeMode": "high138",
+        "dotIndex": 0,
+        "emptyDot": 0,
+        "emptyDotIndex": 0,
+        "expandRGB": false,
+        "mirror": false,
+        "model": "0.1 P10 单红12接口4扫上蛇形每区16行",
+        "moduleHeight": 8,
+        "moduleLines": 16,
+        "moduleWidth": 8,
+        "oePolarity": true,
+        "scanDot": false,
+        "scanLines": 4,
+        "split": false,
+        "strPolarity": true,
+        "warpBits": 8,
+        "warpMode": "up",
+        "warpTimes": 4,
+        "warpTurn": false
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Windows>
+      <VerticalLayout visible="false" name="licenseshow" float="true" bkimage="file='license_bg.png' corner='12,12,12,12'" pos="5,35,475,375">
+	  
+		<Container height="10" />
+        <Label name="lblLicenseTitle" text=""  font="5" align="center" textcolor="0xFF000000"/>
+        <Container height="4" />
+		
+      	<RichEdit width="465" height="260" name="editLicense" autovscroll="true" vscrollbar="true" readonly="true" textcolor="0xFF000000"   inset="12,12,2,12" bordersize="1"  />
+        
+        <HorizontalLayout height="34">
+        	<Control />
+			<Button name="btnLicenseAgree" width="80" height="30" normalimage="btn_wild_normal.png" hotimage="btn_wild_hovered.png" pushedimage="btn_wild_pressed.png" disabledimage="btn_wild_disabled.png" font="6" textcolor="0xffffffff" disabledtextcolor="0xffffffff" margin="0,10,0,0" text="Agree" />
+            <Control width="20" />
+        </HorizontalLayout>
+                
+      </VerticalLayout>
+	</Windows>
