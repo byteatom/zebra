@@ -18,7 +18,7 @@ Commands VariableManager::commands()
 	Command cmdNew;
 	cmdNew.menuBarIndex = MENU_ADD;
 	cmdNew.menuIndex = MENU_ADD_VARIABLE;
-	cmdNew.action = new QAction(tr("Variable"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/variable_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(VariableManager::*)()>(&VariableManager::create));

@@ -29,6 +29,7 @@ public:
 		FLASH_TEXT,
 		HUMITURE,
 		VARIABLE,
+		WEB,
 		MAX_TYPE
 	};
 

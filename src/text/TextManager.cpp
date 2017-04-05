@@ -23,7 +23,7 @@ Commands TextManager::commands()
 	cmdNew.menuBarIndex = MENU_ADD;
 	cmdNew.menuIndex = MENU_ADD_TEXT;
 	cmdNew.toolBarIndex = TOOL_TEXT;
-	cmdNew.action = new QAction(tr("Text"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/text_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(TextManager::*)()>(&TextManager::create));

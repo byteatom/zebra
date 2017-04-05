@@ -18,10 +18,10 @@ RegionCfger::~RegionCfger()
 
 void RegionCfger::appendBorder()
 {
-	append(attr->border->newCfger());
+	if (attr->border) append(attr->border->newCfger());
 }
 
 void RegionCfger::appendGlow()
 {
-	append(attr->glow->newCfger());
+	if (attr->glow) append(attr->glow->newCfger());
 }

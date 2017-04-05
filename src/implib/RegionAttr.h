@@ -36,8 +36,8 @@ public:
 		NodeAttr{box, type, jnode},
 		geometry{&geometry},
 		contentRect{&contentRect},
-		border{borderFactory->create(jnode)},
-		glow{glowFactory->create(jnode, &geometry, &contentRect)}
+		border{borderFactory ? borderFactory->create(jnode) : nullptr},
+		glow{glowFactory ? glowFactory->create(jnode, &geometry, &contentRect) : nullptr}
 	{
 		boxRectConn = box->contentRect().connect([this]() {
 			const KRect& boxRect = this->box->contentRect().ref();
@@ -68,7 +68,7 @@ public:
 		});
 		auto slot = [this](){updateContentRect();};
 		geometry.connect(slot);
-		border->cfgChanged(slot);
+		if (border) border->cfgChanged(slot);
 
 		const Attr<KRect>& boxRect = box->contentRect();
 		int width = boxRect->size->width() / 2;
@@ -98,8 +98,8 @@ public:
 	virtual ~RegionAttr()
 	{
 		boxRectConn.disconnect();
-		delete border;
-		delete glow;
+		if (border) delete border;
+		if (glow) delete glow;
 	}
 
 	void exportProjJson(Json& jnode)
@@ -111,8 +111,8 @@ public:
 		jnode["width"] = geometry->size->width();
 		jnode["height"] = geometry->size->height();
 
-		border->exportProjJson(jnode);
-		glow->exportProjJson(jnode);
+		if (border) border->exportProjJson(jnode);
+		if (glow) glow->exportProjJson(jnode);
 	}
 
 	QString exportCoreJson(Json& jNodes)
@@ -143,12 +143,12 @@ public:
 			{"areaDescribe", jArea}
 		};
 
-		ret = border->exportCoreJson(jNode);
+		if (border) ret = border->exportCoreJson(jNode);
 		if (!ret.isEmpty()) return ret;
 
 		jNodes.push_back(jNode);
 
-		ret = glow->exportCoreJson(jNodes);
+		if (glow) ret = glow->exportCoreJson(jNodes);
 		if (!ret.isEmpty()) return ret;
 
 		return QString();
@@ -180,7 +180,7 @@ public:
 private:
 	void updateContentRect()
 	{
-		int borderWidth = border->width();
+		int borderWidth = border ? border->width() : 0;
 
 		contentRect->setRect(borderWidth, borderWidth,
 							 geometry->size->width() - borderWidth * 2,

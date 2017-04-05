@@ -18,7 +18,7 @@ public:
 	virtual void play()
 	{
 		playing = true;
-		attr->border->play();
+		if (attr->border) attr->border->play();
 	}
 
 	virtual void draw() = 0;
@@ -29,14 +29,14 @@ public:
 			sight = QPixmap{attr->geometry->size};
 		}
 		sight.fill(Qt::transparent);
-		attr->border->draw();
+		if (attr->border) attr->border->draw();
 		draw();
 	}
 
 	virtual void stop()
 	{
 		playing = false;
-		attr->border->stop();
+		if (attr->border) attr->border->stop();
 	}
 
 	void update()
@@ -81,7 +81,7 @@ protected:
 			attr->geometry->setRect(rect);
 		});
 
-		attr->border->setSurface(&sight);
+		if (attr->border) attr->border->setSurface(&sight);
 	}
 
 	virtual ~RegionView() = default;

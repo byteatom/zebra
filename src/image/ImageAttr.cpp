@@ -26,12 +26,11 @@ ImageAttr::ImageAttr(INodeBox* box, Json* jnode):
 	if (jnode) {
 		jtov(itemNameId);
 
-		Json::iterator jitNode;
-		jitNode = jnode->find("items");
-		if (jitNode != jnode->end())	{
-			Json jitems = *jitNode;
-			for (Json::iterator jitItem = jitems.begin(); jitItem != jitems.end(); ++jitItem) {
-				Json jitem  = *jitItem;
+		Json::iterator jitemsIt = jnode->find("~items");
+		if (jitemsIt != jnode->end())	{
+			Json jitems = *jitemsIt;
+			for (Json::iterator jItemIt = jitems.begin(); jItemIt != jitems.end(); ++jItemIt) {
+				Json jitem  = *jItemIt;
 				Json::iterator jitType = jitem.find("type");
 				if (jitType == jitem.end()) continue;
 				int type = *jitType;
@@ -174,7 +173,7 @@ void ImageAttr::exportProjJson(Json& jnode)
 		attrItem->exportProjJson(jitem);
 		jitems.push_back(jitem);
 	}
-	jnode["items"] = jitems;
+	jnode["~items"] = jitems;
 }
 
 QString ImageAttr::exportCoreJsonArea(Json& jArea)

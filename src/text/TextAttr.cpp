@@ -12,7 +12,7 @@ extern IFadeFactory* fadeFactory;
 
 TextAttr::TextAttr(INodeBox* box, Json* jnode):
 	RegionAttr{box, INode::Type::TEXT, jnode},
-	fade{fadeFactory->create(jnode, 3, true)}
+	fade{fadeFactory ? fadeFactory->create(jnode, 3, true) : nullptr}
 {
 	contentRect.connect([this](){print();});
 
@@ -29,7 +29,7 @@ TextAttr::TextAttr(INodeBox* box, Json* jnode):
 
 TextAttr::~TextAttr()
 {
-	delete fade;
+	if (fade) delete fade;
 }
 
 void TextAttr::print()
@@ -132,16 +132,18 @@ QString TextAttr::exportCoreJsonArea(Json& jArea)
 	Json jFade;
 	jFade["width"] = rectContent.width();
 	jFade["height"] = rectContent.height();
+	if (fade) {
 	ICoreJson* fadeJson = dynamic_cast<ICoreJson*>(fade);
 	if (fadeJson) {
 		ret = fadeJson->exportCoreJson(jFade);
 		if (!ret.isEmpty()) return ret;
+		}
 	}
 
 	if (pages.empty()) return QString(tr("Region \"%1\" is empty!")).arg(name);
 
 	Json jPages;
-	if (fade->continuous()) {
+	if (fade && fade->continuous()) {
 		QStr path = UtilQt::uuidFile(setting->tempDir(), ".bmp");
 		snapshot.save(path);
 		Json jPage = jFade;

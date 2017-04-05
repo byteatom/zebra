@@ -23,7 +23,7 @@ Commands ImageManager::commands()
 	cmdNew.menuBarIndex = MENU_ADD;
 	cmdNew.menuIndex = MENU_ADD_IMAGE;
 	cmdNew.toolBarIndex = TOOL_IMAGE;
-	cmdNew.action = new QAction(tr("Image"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/image_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(ImageManager::*)()>(&ImageManager::create));

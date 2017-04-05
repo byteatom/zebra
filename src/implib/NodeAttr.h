@@ -28,9 +28,9 @@ public:
 			name = box->buildName(typeName());
 	}
 
-	const QString typeName()
+	static const char* typeStr(int type)
 	{
-		static const char* typeNames[INode::Type::MAX_TYPE] = {
+		static const char* typeStrs[INode::Type::MAX_TYPE] = {
 			QT_TR_NOOP("Screen"),
 			QT_TR_NOOP("Program"),
 			QT_TR_NOOP("Text"),
@@ -41,14 +41,35 @@ public:
 			QT_TR_NOOP("Flash Text"),
 			QT_TR_NOOP("Humiture"),
 			QT_TR_NOOP("Variable"),
+			QT_TR_NOOP("Web"),
 		};
 
-		return QCoreApplication::translate("NodeAttr", typeNames[type]);
+		return typeStrs[type];
+	}
+	static int str2Type(const std::string& str)
+	{
+		for (int i = 0; i < INode::Type::MAX_TYPE; ++i) {
+			if (str == typeStr(i)) return i;
+		}
+		return INode::Type::MAX_TYPE;
+	}
+	static const QString typeName(int type)
+	{
+		return QCoreApplication::translate("NodeAttr", typeStr(type));
+	}
+
+	const QString typeStr()
+	{
+		return typeStr(type);
+	}
+	const QString typeName()
+	{
+		return typeName(type);
 	}
 
 	void exportProjJson(Json& jnode)
 	{
-		vtoj(type);
+		jnode["type"] = typeStr();
 		vtoj(name);
 	}
 

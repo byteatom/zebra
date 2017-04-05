@@ -21,7 +21,7 @@ Commands CalendarManager::commands()
 	cmdNew.menuBarIndex = MENU_ADD;;
 	cmdNew.menuIndex = MENU_ADD_CALENDAR;
 	cmdNew.toolBarIndex = TOOL_CALENDAR;
-	cmdNew.action = new QAction(tr("Calendar"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/calendar_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(CalendarManager::*)()>(&CalendarManager::create));

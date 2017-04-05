@@ -20,6 +20,8 @@ protected:
 
 	void append(QWidget* cfger)
 	{
+		if (!cfger) return;
+
 		cfger->setParent(this);
 		cfger->move(width(), UI_SPACE);
 		cfger->show();

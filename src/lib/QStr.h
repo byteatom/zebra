@@ -16,14 +16,6 @@ struct QStr : public QString
 	{
 	}
 
-	QStr(const char* other) :
-		QString{other}
-	{}
-
-	QStr(const char* other, int size) :
-		QString{QByteArray{other, size}}
-	{}
-
 	QStr(const QString& other) :
 		QString{other}
 	{}
@@ -38,6 +30,14 @@ struct QStr : public QString
 	{
 		return QString::toStdString();
 	}
+
+	QStr(const char* other) :
+		QString{other}
+	{}
+
+	QStr(const char* other, int size) :
+		QString{QByteArray{other, size}}
+	{}
 };
 
 #endif // QSTRINGU8_H

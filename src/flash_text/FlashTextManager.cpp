@@ -22,7 +22,7 @@ Commands FlashTextManager::commands()
 	cmdNew.menuBarIndex = MENU_ADD;
 	cmdNew.menuIndex = MENU_ADD_FLASH_TEXT;
 	cmdNew.toolBarIndex = TOOL_FLASH_TEXT;
-	cmdNew.action = new QAction(tr("Flash Text"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/flash_text_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(FlashTextManager::*)()>(&FlashTextManager::create));

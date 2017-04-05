@@ -13,7 +13,7 @@ ScreenView::ScreenView(ScreenAttr *attr):
 	attr->para.size.connect([this]() {
 		zoom(zoomFactor);
 	});
-    mouseGeometry.canResize = false;
+	mouseGeometry.canResize = true;
 	mouseGeometry.canMove = false;
 	mouseGeometry.changing.connect([this](QRectF& rectf){
 		this->attr->para.size = (rectf.size() / zoomFactor).toSize();

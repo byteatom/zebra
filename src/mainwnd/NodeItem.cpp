@@ -33,7 +33,8 @@ void NodeItem::setIcon()
 		"image/icon/timer_64.png",
 		"image/icon/flash_text_64.png",
 		"image/icon/humiture_48.png",
-		"image/icon/variable_64.png"
+		"image/icon/variable_64.png",
+		"image/icon/web_64.png"
 	};
 	QTreeWidgetItem::setIcon(0, QIcon{iconPaths[node->type()]});
 }

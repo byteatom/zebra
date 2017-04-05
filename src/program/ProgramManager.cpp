@@ -12,14 +12,14 @@ Commands ProgramManager::commands()
 	cmdNew.menuBarIndex = MENU_ADD;
 	cmdNew.menuIndex = MENU_ADD_PROGRAM;
 	cmdNew.toolBarIndex = TOOL_PROGRAM;
-	cmdNew.action = new QAction(tr("Program"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/program_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(ProgramManager::*)()>(&ProgramManager::create));
 	cmds.push_back(cmdNew);
 
 	Command cmdSeparator;
-	cmdSeparator.menuBarIndex = MENU_ADD;;
+	cmdSeparator.menuBarIndex = MENU_ADD;
 	cmdSeparator.menuIndex = MENU_ADD_SEPERATOR1;
 	cmdSeparator.action = new QAction(nullptr);
 	cmdSeparator.action->setSeparator(true);
@@ -64,7 +64,7 @@ INode* ProgramManager::create(INodeBox* box, Json& jnode)
 	mainWnd->addNode(node);
 	Json jnodes = jnode["~regions"];
 	for (Json::iterator jit = jnodes.begin(); jit != jnodes.end(); ++jit) {
-		nodeFactories[(*jit)["type"]]->create(node, *jit);
+		nodeFactories[NodeAttr::str2Type((*jit)["type"])]->create(node, *jit);
 	}
 	return node;
 }

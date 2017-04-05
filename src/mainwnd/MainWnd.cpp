@@ -108,7 +108,7 @@ void MainWnd::init(const std::list<IPlugin*>& plugins)
 	connect(ui->animate, &QAction::toggled,
 			this, &MainWnd::animateSwitch);
 	animateTimer.setTimerType(Qt::PreciseTimer);
-	animateTimer.setInterval(15);
+	animateTimer.setInterval(setting->preset().value("drawInterval").toInt());
 	connect(&animateTimer, &QTimer::timeout,
 			this, &MainWnd::animateDraw);
 

@@ -27,6 +27,8 @@
 int main(int argc, char *argv[])
 {
 	//QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+	//QApplication::setAttribute(Qt::AA_UseDesktopOpenGL);
+
 	QApplication app(argc, argv);
 
 	if (argc < 2) {
@@ -113,7 +115,7 @@ int main(int argc, char *argv[])
 		if (creator)
 			plugins.push_back(creator());
 		else
-			kshowErr<<"failed to load "<<name;
+			kshowErr<<"failed to load "<<name<<":"<<lib.errorString();
 	}
 
 	splash.showMessage("Loading project...", Qt::AlignBottom | Qt::AlignHCenter, Qt::blue);

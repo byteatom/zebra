@@ -7,8 +7,7 @@ TextCfger::TextCfger(TextAttr *attr) :
 {
 	append(attrCfger);
 
-	QWidget* fadeCfger = attr->fade->newCfger();
-	append(fadeCfger);
+	if (attr->fade) append(attr->fade->newCfger());
 
 	appendBorder();
 	appendGlow();

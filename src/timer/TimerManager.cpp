@@ -21,7 +21,7 @@ Commands TimerManager::commands()
 	cmdNew.menuBarIndex = MENU_ADD;
 	cmdNew.menuIndex = MENU_ADD_TIMER;
 	cmdNew.toolBarIndex = TOOL_TIMER;
-	cmdNew.action = new QAction(tr("Timer"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/timer_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(TimerManager::*)()>(&TimerManager::create));

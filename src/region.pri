@@ -9,7 +9,7 @@ SOURCES += \
 HEADERS += \
 	$$PWD/implib/Cfger.h \
 	$$PWD/implib/RegionCfger.h \
-	$$PWD/implib/GeometryCfger.h \
+	$$PWD/implib/GeometryCfger.h
 
 FORMS += \
 	$$PWD/implib/RegionCfger.ui \

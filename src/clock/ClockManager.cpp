@@ -21,7 +21,7 @@ Commands ClockManager::commands()
 	cmdNew.menuBarIndex = MENU_ADD;;
 	cmdNew.menuIndex = MENU_ADD_CLOCK;
 	cmdNew.toolBarIndex = TOOL_CLOCK;
-	cmdNew.action = new QAction(tr("Clock"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/clock_64.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(ClockManager::*)()>(&ClockManager::create));

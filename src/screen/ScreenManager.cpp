@@ -36,7 +36,7 @@ Commands ScreenManager::commands()
 	Command cmdNew;
 	cmdNew.menuBarIndex = MENU_ADD;
 	cmdNew.menuIndex = MENU_ADD_SCREEN;
-	cmdNew.action = new QAction(tr("Screen"), nullptr);
+	cmdNew.action = new QAction(NodeAttr::typeName(type()), nullptr);
 	cmdNew.action->setIcon(QIcon(QPixmap("image/icon/screen_16.png")));
 	connect(cmdNew.action, &QAction::triggered,
 			this, static_cast<void(ScreenManager::*)()>(&ScreenManager::create));
@@ -61,7 +61,8 @@ void ScreenManager::create()
 
 INode* ScreenManager::create(INodeBox* box, Json& jnode)
 {
-	Screen* node = new Screen(box, &jnode, core, protocolFactory->create(&jnode));
+	Screen* node = new Screen(box, &jnode, core,
+				protocolFactory ? protocolFactory->create(&jnode) : nullptr);
 	mainWnd->addNode(node);
 	Json jnodes = jnode["~programs"];
 	for (Json::iterator jit = jnodes.begin(); jit != jnodes.end(); ++jit) {
